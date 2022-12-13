@@ -1,0 +1,1787 @@
+#ForceHTTPS()#UseExpire()<!--Order Porter Request-->
+<!-- Version 8/2021 -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=11" >
+		<title>#Location.LocationName</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script language="javascript" type="text/javascript" src="https://www.orderporter.com/cust/jQuery/jSignature/jSignature.min.js"></script>
+      	<script src='https://secure.bngpaymentgateway.com/token/Collect.js' data-tokenization-key='5mN8N7-jhr55W-N22pxX-uAW2s9'></script>
+
+		<style type="text/css">
+			/* Classic Layout */
+
+			.LogoContainer{display: block; position: relative; height:120px; width: 295px; margin:0 auto 0 10px;white-space:nowrap;text-align:center;}
+			h2{color:#000000;}
+			.h2Title{color:#FFFFFF;}
+			.h2Number{color:#000000;}
+			.Panel{margin: 17px 0px;border: 1px solid #AAAAAA;padding: 10px;background-color: #FAFAFA;}
+			.tHead{background-color: #44618D;color:#FFFFFF;}
+			.tFoot{background-color: #E0E0E0;}
+			.PrimaryColor{background-color:#44618D !important;}
+			.AccentColor{background-color:#B0C4DE !important;}
+          	.ImportantMessage{color:#FF0000;}
+
+		</style>
+
+		<style type="text/css">
+          	html{font-size:100%;}
+			.Banner { background-repeat:no-repeat; padding: 5px;margin: 0 -15px;}
+			.Logo{max-height:100%; max-width:100%;display:inline-block;position:relative;margin:0 auto;vertical-align:middle;}
+			a:link{color:#acacac;}
+			a:visited{color:#888888;}
+			a{text-decoration: none;}
+			a img {border: none;}
+
+			/*Used with an element to align other elements vertically*/
+			.helper {
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+			}
+			body
+			{
+				background-color:#EBEBEB;
+				font-family:calibri, arial, sans-serif !important;
+				font-size:0.875rem;
+				min-width:1170px;
+				margin:0;
+				padding:0;
+			}
+			:focus, :active{outline: 0;}
+			/* Text styling */
+			h1
+			{
+				font-weight:bold;
+				color:#222222;
+				font-size: 1rem;
+				margin-bottom:0;
+			}
+			h2
+			{
+				margin:0;
+				font-weight:bold;
+				font-size:1.375rem;
+				padding-bottom:2px;
+				margin-bottom:0px;
+			}
+			/* Used for "Your available options" verbiage spacing. */
+			p.SubHeader
+			{
+				margin: 6px 0 8px 0;
+			}
+			/* Used for Prepared By and Prepared For positioning. */
+			p.Name
+			{
+				margin: .3em 0 0 0 !important;
+			}
+			p.Footer
+			{
+				text-align: center;
+				font-size: 0.75rem;
+				color:#666666;
+				margin: 10px;
+			}
+			.Bold{font-weight: bold;}
+			.Underline{text-decoration: underline;}
+			form
+			{
+				margin:auto;
+				font-family:calibri, arial, sans-serif;
+				font-size:0.875rem;
+			}
+			/* Main Content Container */
+			.Container
+			{
+				width:1170px;
+				padding: 0 15px 15px 15px;
+				border: 1px solid #AAAAAA;
+				border-top: 0;
+				margin: 0 auto;
+				background-color: #FFFFFF;
+				behavior: url(https://www.orderporter.com/cust/jQuery/PIE-1.0.0/PIE.htc); /* Enables CSS3 in IE6-8 */
+			}
+			/* Default Input Behavior */
+            input[type="text"]:focus{
+              transition:0.5s;
+              border-color:#add8e6 !important;
+          	}
+          	textarea:focus{
+              transition:0.5s;
+              border-color:#add8e6 !important;
+          	}
+          	/* Text inside input fields */
+			input[type="text"]
+			{
+				font-size:0.875rem;
+				font-family:calibri, arial, sans-serif;
+            	border: 1px solid #a9a9a9;
+			}
+			/* Gray background for signature box. */
+			#Signature
+			{
+				width:100%;
+				height:150px;
+				background-color:#D3D3D3;
+				z-index:-1;
+			}
+			/*INTRODUCTION HEADER*/
+			.IntroHeader
+			{
+				margin-bottom:2em;
+			}
+			.introduction
+			{
+				padding:5px 0;
+				margin:0 auto 0 auto;
+				float: left;
+				width:100%;
+
+			}
+			.IntroLeft
+			{
+				clear:both;
+				padding: 0 5px;
+				vertical-align: top;
+				width: 75%;
+				float: left;
+				background-color:#F5F5F5;
+			}
+			.IntroRight
+			{
+				padding: 0 5px;
+				width: 22%;
+				vertical-align: top;
+				float: right;
+				background-color:#F5F5F5;
+			}
+			/* Red not approved message at top of page */
+			.NotApprovedMessage
+			{
+				font-size:1rem;
+				color:#FFFFFF;
+				font-weight:bold;
+				margin: 0 auto 5px auto;
+				text-align: center;
+			}
+			/* Black approved message at top of page */
+			.ApprovalMessage
+			{
+				font-size:1rem;
+				color:#222222;
+				font-weight:bold;
+			}
+			.UnapprovedPanel
+			{
+				color: #31708f !important;
+				background-color: #d9edf7 !important;
+				border-color: #bce8f1 !important;
+				margin: 0 auto;
+				text-align: center;
+			}
+			.UnapprovedPanel a:link, .UnapprovedPanel a:visited{color: #31708f !important;}
+
+			.ApprovedPanel
+			{
+				color: #3c763d !important;
+				background-color: #dff0d8 !important;
+				border-color: #d6e9c6 !important;
+				margin: 0 auto;
+				padding: 10px 10px 15px 10px;
+				text-align: center;
+			}
+
+			.ErrorPanel
+			{
+				color: #a94442 !important;
+				background-color: #f2dede !important;
+				border-color: #ebccd1 !important;
+				margin: 0 auto;
+				text-align: center;
+			}
+
+			.WarningPanel
+			{
+				color: #8a6d3b !important;
+				background-color: #fcf8e3 !important;
+				border-color: #faebcc !important;
+				margin: 0 auto;
+				text-align: center;
+			}
+
+			/* Sales Rep Picture size */
+			#RepPic
+			{
+				height:100px;
+			}
+			/* Sales Rep signature image size */
+			#RepSig
+			{
+				height:30px;
+				max-width:100px;
+			}
+			/* Container for both RepPic and RepSig */
+			#RepImg
+			{
+				float:right;
+				margin-left:10px;
+				text-align:center;
+			}
+			/* Green check when quote is approved. */
+			img.completed
+			{
+				position:relative;
+				top:5px;
+				padding-right:2px;
+			}
+			/* Red "!" balloon image */
+			img.required
+			{
+				width:200px;
+				border:0;
+				margin-left:90px;
+			}
+			/* TWO COLUMN LAYOUT */
+			.LeftColumn
+			{
+				width:1170px;
+				vertical-align: top;
+			}
+
+			img.PDF
+			{
+				vertical-align: middle;
+				margin: 10px auto;
+				border: 0;
+
+			}
+			/* TABLE FORMATTING*/
+			/* TabTitle controls text style in the header for the Accordion panel. */
+			.TabTitle{color:#222222 !important;font-family:calibri, arial, sans-serif;}
+			/* TabRedSubTitle controls text style of optional information in the header for the Accordion panel. */
+			.TabRedSubTitle{
+				color:#B50101;
+				font-size:0.75rem;
+			}
+			/* TabSubTitle is used for displaying TabNotes. */
+			.TabSubTitle{color:#666666;}
+			table
+			{
+				width:100%;
+				margin: 0 auto;
+				border-collapse: collapse !important;
+			}
+			/* TotalsTable corresponds to Quote Summary. FinanceTable corresponds to Terms and Finacing table. */
+			table.TotalsTable, table.FinanceTable
+			{
+				margin:25px auto;
+				border-spacing: 0;
+				font-size: 0.75rem;
+			}
+			table.FinanceTable{margin:15px auto 20px auto;}
+			/* Item level tables have a smaller font size. */
+			.TabContent
+			{
+				font-family:calibri, arial, sans-serif;
+				font-size: 0.75rem;
+				margin: 5px auto 15px;
+				padding: 0px 5px 5px;
+				border:1px solid #AAAAAA;
+				background-color: white;
+			}
+			/* Used on the Sub Header or Sub Footer rows. Gives it a gray background. */
+			tr.SubHeadRow{background-color: #D6D6D6 !important; color:#000000;}
+			tr.SubFootRow{background-color: #BBBBBB !important; color:#000000;}
+			tr:nth-child(even) {background: #F6F6F6;}
+			tr:nth-child(odd) {background: #FFFFFF;}
+			/* Denotes the Checkbox width (used to define the checkbox column). */
+			th.ChBx, td.ChBx{width: 25px;}
+			th.Qty, td.Qty{width: 60px;text-align:center;}
+          	th:last-child{border-right:1px solid black;}
+			th.Thumb, td.Thumb{width:62px;}
+			th.Price, td.Price{width:80px;}
+			/* Standard padding for all table cells */
+			th{padding:3px;vertical-align:top;}
+			td{padding:3px; border-right: 1px solid black; border-left: 1px solid black;vertical-align:top;}
+			td.tHead{padding:3px; border-top: 1px solid black; border-bottom: 1px solid black;}
+			td.tFoot{padding:3px;border:none;}
+			tr.theader{border:1px solid black;border-bottom:none;}
+			tr.tfooter{border:1px solid black;}
+			tr.TotalsRow{background-color: #E0E0E0;border:1px solid black;}
+			.bdrRgt{border-right:1px solid black !important;}
+			.ItemNotes{background-color:#DEDEDE; border-top: 1px solid black; border-bottom: 1px solid black;}
+			/* Controls the Quote Summary header */
+			.TotalsHeaderRow{font-weight: bold;}
+			.Line
+			{
+				border-bottom: 1px solid #CCCCCC;
+				margin: 4px 0;
+			}
+			/* Controls Quote Summary content. */
+			.TotalsTab
+			{
+				background-color: #EFEFEF;
+				text-align: center;
+				border-bottom:1px solid #E7E7E7;
+			}
+			/*Controls background color for the terms and recurring totals*/
+			.FinanceTotals{background-color:#E0E0E0;}
+			/* Changes optional tabs or items to gray */
+			.Optional{color:#888888;}
+			/* UPDATE OPTIONS FORMATTING */
+			.UpdateButton{vertical-align: middle; text-align: center; margin: 20px auto 10px auto;border: 0;display:none;}
+          	.UpdateButton:last-child{display:block;}
+			/* APPROVAL AND PAYMENT */
+			#Approve
+			{
+				width:100%;
+			}
+			p.Approve
+			{
+				margin:.6em 0 1em 0;
+			}
+			p.SigPay
+			{
+				margin:10px 0 0 0;
+			}
+			#ApprovalFieldsBox
+			{
+				width:74%;
+				margin:0 auto;
+			}
+			#FieldColumnLeft
+			{
+				width: 230px;
+				vertical-align:top;
+				margin: 0 auto 20px auto;
+			}
+
+
+			#FieldColumnRight
+			{
+				margin: 0 auto;
+				padding:0;
+				width:60%;
+			}
+
+			/* Forces all <input> tags inside the FieldColumn class to have a set width. */
+			.FieldColumn input
+			{
+				width: 200px;
+			}
+			.FieldColumn .Field
+			{
+				margin-bottom: 10px;
+			}
+			/* Positioning the "X" for the Signature box. */
+			img.SignX
+			{
+				position: relative;
+				top: 120px;
+				right: 40%;
+				height: 15px;
+			}
+			#ClearButton
+			{
+				text-align: center;
+				color: #b5b5b5;
+				text-decoration: underline;
+			}
+			#ClearButton:hover
+			{
+				color: #44618D;
+				cursor: pointer;
+			}
+			img.req, img.reqcheck
+			{
+				height: 16px;
+			}
+			/* RIGHT COLUMN */
+			.Video
+			{
+				height:158px;
+				width: 270px;
+			}
+			iframe {margin: 5px auto 0 auto;}/*Adds spacing between videos*/
+
+          	/* Video Styling */
+            .videoiframe {
+                width: 100%;
+            }
+            .videoiframe iframe {
+                width: 100%;
+                height: auto;
+            }
+            .videocaption, .videodescription, .videotitle {
+                cursor:help;
+            }
+            .videotitle {
+                font-size: 1.125rem;
+                font-weight: bold;
+            }
+
+			.ActiveQuotes
+			{
+				width: 240px;
+				text-align: center;
+				max-height: 150px;
+				overflow: auto;
+				margin: 0 auto 0 auto;
+			}
+			.imgPortrait
+			{
+				position:relative;
+				margin:0 auto;
+				width:240px;
+				height:auto;
+			}
+			/*  COMMENTS SECTION  */
+			.Comments {padding:0; width:100%; text-align: center;}
+			/* FOOTER */
+			.FooterImg{
+              	height:20px;
+          		vertical-align: middle;
+				padding:5px;
+				border: 0;
+			}
+			/*ALIGNMENT*/
+			.Left{text-align:left}
+			.Right{text-align:right}
+			.Center{text-align:center}
+			.FLeft{float:left}
+			.FRight{float:right}
+			.Clear{clear:both}
+			.VTop{vertical-align:top}
+			.VMid{vertical-align:middle}
+			.VBottom{vertical-align:bottom}
+
+			/* Item Styling */
+          	.PackageHeader{background-color:#DFDFDF !important;}
+			.PackageItem{background-color:#F6F6F6 !important;}
+          	.ProductDetailsImg {
+                float:left;
+            	width:15%;
+            	margin:0 5px;
+            }
+          	.ProductDetailsImg img
+          	{
+            	min-width:20px;
+            	max-width:100%;
+                max-height:150px;
+            }
+            .ProductDetails {
+                float:left;
+            	#BeginIf("#Quote.OrderPorterShowImage","True")width:calc(85% - 15px);#EndIf()
+            }
+          	/* Button Styling */
+			.btn {
+				font-family: Arial;
+				color: #ffffff;
+				font-size: 14px;
+				background: #44618D;
+				padding: 8px 15px 8px 15px;
+				border: solid #AAAAAA 1px;
+				text-transform: uppercase;
+			}
+
+			.btn[disabled] {
+				font-family: Arial;
+				color: #cccccc;
+				font-size: 14px;
+				background: #aaaaaa;
+				padding: 8px 15px 8px 15px;
+				border: solid #AAAAAA 1px;
+				text-transform: uppercase;
+			}
+
+			.btn:not([disabled]):hover {
+				background: #B0C4DE;
+				color:black;
+				border: solid #44618D 1px;
+			}
+
+			.btn[disabled]:hover {
+				cursor: not-allowed;
+			}
+
+          	#RequiredFieldsMessage{color:#FF0000;}
+
+          	/* Begin Input and Payment Styles */
+
+			 .tableDataInput input[type="text"], .tableDataInput select, .tableDataInput textarea {
+				/*width: 100%;*/
+				height: calc(1.5rem + .75rem + 2px);
+				padding: .375rem .75rem;
+				font-size: 1rem;
+				font-weight: 400;
+				line-height: 1.5;
+				color: #495057;
+				background-color: #fff;
+				background-clip: padding-box;
+				border: 1px solid#ced4da;
+				border-radius: .25rem;
+				transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+				overflow: visible;
+				margin: 0;
+			}
+
+          	.paymentInput{
+              	width: 100%;
+          	}
+
+          	input[type="submit"], button{
+				text-align: center;
+				vertical-align: middle;
+				padding: .375rem .75rem;
+				font-size: 1rem;
+				line-height: 1.5;
+				//border-radius: .25rem;
+				margin: 0 10px;
+				margin-bottom: .25rem;
+				cursor: pointer;
+				-webkit-appearance: button;
+				text-transform: none;
+				transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+          	}
+
+			.paymentData {
+				display: none;
+				margin: 15px 0;
+			}
+
+			.paymentDataContent {
+				position: relative;
+				text-align: left;
+				display: flex;
+				flex-direction: column;
+				min-width: 0;
+				word-wrap: break-word;
+				background-color: #fff;
+				background-clip: border-box;
+				border: 1px solid rgba(0, 0, 0, 0.125);
+				border-radius: .25rem;
+			}
+
+			.paymentDataContentTitle {
+				border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+				padding: .75rem 1.25rem;
+				margin-bottom: 0;
+				margin-top: 0;
+				background-color: rgba(0, 0, 0, .03);
+				border-bottom: 1px solid rgba(0, 0, 0, .125);
+			}
+
+			.paymentDataMainContent {
+				display: inline-flex;
+				flex: 1 1 auto;
+				padding: 1.25rem;
+			}
+
+			.paymentDataMainContentItem {
+				width: 25%;
+				padding-right: 25px;
+			}
+
+			.paymentDataMainContentItemTotal {
+				display: flex;
+				justify-content: space-between;
+				margin-top: 10px;
+				padding-top: 5px;
+				border-top: 1px solid gray;
+			}
+
+			.paymentQuote {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.paymentAdjustment {
+				display: flex;
+				justify-content: space-between;
+				padding-top: 5px;
+			}
+
+			.paymentAdjustmentPositive {
+				color: green;
+				font-weight: 600;
+			}
+
+			.paymentAdjustmentNegative {
+				color: red;
+				font-weight: 600;
+			}
+          	.paymentButtons{
+            	margin: 7px 3px;
+          	}
+			/* End of ConnectBooster Styles */
+
+
+		</style>
+		#BeginIf("#Quote.OrderPorterPaymentMode","ConnectBooster")
+		<!--Begin ConnectBooster-->
+		<script type="text/javascript">
+        $(function () {
+			// Tokens
+			var GatewayTokenizationKey = "#ConnectBooster.TokenizationKey";
+			var GatewayCustomerVaultEnabled = "#ConnectBooster.StorePaymentInformation";
+			var PmCcEnabled = "#ConnectBooster.CreditCardEnabled";
+			var PmEftEnabled = "#ConnectBooster.ElectronicCheckEnabled";
+			var PmCcAdjustmentAmount = #ConnectBooster.CreditCardAdjustment;
+			var PmEftAdjustmentAmount = #ConnectBooster.ElectronicCheckAdjustment;
+			var PmCcCalculatedAdjustment = #ConnectBooster.CreditCardCalculatedAdjustment;
+			var PmEftCalculatedAdjustment = #ConnectBooster.ElectronicCheckCalculatedAdjustment;
+			var QuoteOrderPorterAmount = #Quote.OrderPorterAmount;
+			var TotalAmount;
+
+			// Rendering
+			function paymentInfoCCRender() {
+
+				//Quote amount Y/N show/hide
+				if (QuoteOrderPorterAmount != "0.00") {
+					if (PmCcAdjustmentAmount > "0") {
+						TotalAmount = QuoteOrderPorterAmount + PmCcCalculatedAdjustment;
+
+						document.getElementById("quoteAmount").innerHTML =
+							"<div class=" + "paymentQuote" + "> <div>Quote Amount: </div><div>$" + QuoteOrderPorterAmount.toFixed(2) + "</div></div>" +
+							"<div class=" + "paymentAdjustment" + ">" + "<span class=" + "paymentAdjustmentNegative" + ">" + PmCcAdjustmentAmount + "% Adjustment </span>$" + PmCcCalculatedAdjustment.toFixed(2) + "</div>" +
+							"<div class=" + "paymentDataMainContentItemTotal" + ">" + "<div><b>Total Amount: </b></div><div>$" + TotalAmount.toFixed(2) + "</div></div>";
+
+						// Display Text
+						document.getElementById("adjustmentsEnabled").setAttribute("style", "display: block")
+						document.getElementById("adjustmentsEnabled").innerHTML =
+							"By paying with this payment method you are forfeiting your cash discount."
+					} else if (PmCcAdjustmentAmount < "0") {
+						TotalAmount = QuoteOrderPorterAmount + PmCcCalculatedAdjustment;
+						// Convert PmCcAdjustmentAmount to string to get rid of -
+						var percent = PmCcAdjustmentAmount.toString();
+
+						document.getElementById("quoteAmount").innerHTML =
+							"<div class=" + "paymentQuote" + "> <div>Quote Amount: </div><div>$" + QuoteOrderPorterAmount.toFixed(2) + "</div></div>" +
+							"<div class=" + "paymentAdjustment" + ">" + "<span class=" + "paymentAdjustmentPositive" + ">Save " + percent.substr(1, percent.length) + "%</span>$" + PmCcCalculatedAdjustment.toFixed(2) + "</div>" +
+							"<div class=" + "paymentDataMainContentItemTotal" + ">" + "<div><b>Total Amount: </b></div><div>$" + TotalAmount.toFixed(2) + "</div></div>";
+					} else {
+						TotalAmount = QuoteOrderPorterAmount;
+						document.getElementById("quoteAmount").innerHTML =
+							"<div class=" + "paymentQuote" + "> <div>Quote Amount: </div><div>$" + QuoteOrderPorterAmount.toFixed(2) + "</div></div>" +
+							"<br>" + "<div class=" + "paymentDataMainContentItemTotal" + "><b>Total Amount: </b>$" + TotalAmount.toFixed(2) + "</div>";
+					}
+
+				}
+
+				gatewayVault();
+			}
+
+			function paymentInfoACHRender() {
+
+				//Quote amount Y/N show/hide
+				if (QuoteOrderPorterAmount != "0.00") {
+					if (PmEftAdjustmentAmount > "0") {
+						TotalAmount = QuoteOrderPorterAmount + PmEftCalculatedAdjustment;
+
+						document.getElementById("quoteAmount").innerHTML =
+							"<div class=" + "paymentQuote" + "> <div>Quote Amount: </div><div>$" + QuoteOrderPorterAmount.toFixed(2) + "</div></div>" +
+							"<div class=" + "paymentAdjustment" + ">" + "<span class=" + "paymentAdjustmentNegative" + ">" + PmEftAdjustmentAmount + "% Adjustment </span>$" + PmEftCalculatedAdjustment.toFixed(2) + "</div>" +
+							"<div class=" + "paymentDataMainContentItemTotal" + ">" + "<div><b>Total Amount: </b></div><div>$" + TotalAmount.toFixed(2) + "</div></div>";
+
+						// Display Text
+						document.getElementById("adjustmentsEnabled").setAttribute("style", "display: block")
+						document.getElementById("adjustmentsEnabled").innerHTML =
+							"By paying with this payment method you are forfeiting your cash discount."
+					} else if (PmEftAdjustmentAmount < "0") {
+						TotalAmount = QuoteOrderPorterAmount + PmEftCalculatedAdjustment;
+						// Convert PmEftAdjustmentAmount to string to get rid of -
+						var percent = PmEftAdjustmentAmount.toString();
+
+						document.getElementById("quoteAmount").innerHTML =
+							"<div class=" + "paymentQuote" + "> <div>Quote Amount: </div><div>$" + QuoteOrderPorterAmount.toFixed(2) + "</div></div>" +
+							"<div class=" + "paymentAdjustment" + ">" + "<span class=" + "paymentAdjustmentPositive" + ">Save " + percent.substr(1, percent.length) + "%</span>$" + PmEftCalculatedAdjustment.toFixed(2) + "</div>" +
+							"<div class=" + "paymentDataMainContentItemTotal" + ">" + "<div><b>Total Amount: </b></div><div>$" + TotalAmount.toFixed(2) + "</div></div>";
+					} else {
+						TotalAmount = QuoteOrderPorterAmount;
+						document.getElementById("quoteAmount").innerHTML =
+							"<div class=" + "paymentQuote" + "> <div>Quote Amount: </div><div>$" + QuoteOrderPorterAmount.toFixed(2) + "</div></div>" +
+							"<div class=" + "paymentDataMainContentItemTotal" + ">" + "<div><b>Total Amount: </b></div><div>$" + TotalAmount.toFixed(2) + "</div></div>";
+					}
+
+				}
+
+				gatewayVault();
+			}
+
+			function gatewayVault() {
+				// Gateway Vault Y/N
+				if (GatewayCustomerVaultEnabled == "True") {
+					document.getElementById("gatewayEnabled").setAttribute('style', 'display: block;');
+					document.getElementById("GatewayAddToVault").checked = true;
+				} else {
+					document.getElementById("gatewayEnabled").setAttribute('style', 'display: none');
+					document.getElementById("GatewayAddToVault").checked = false;
+				}
+				//Remove pay by buttons
+				document.getElementById("customBankAccountPayment").setAttribute("style", "display: none");
+				document.getElementById("customCCPayment").setAttribute("style", "display: none");
+
+				//Trigger form validation
+				$('#firstnamebilling').keyup();
+
+			}
+
+			// Collect.JS
+			function payBankAccount() {
+				// BankAccount Base
+				CollectJS.configure({
+					'tokenizationKey': GatewayTokenizationKey,
+					'paymentSelector': '#customBankAccountPayment',
+					'theme': 'material',
+					'primaryColor': '#2F5AA3',
+					'secondaryColor': '#cecece',
+					'buttonText': 'SAVE',
+					'instructionText': 'Enter Banking Information Below',
+					'paymentType': 'ck',
+					'callback': function (response) {
+						document.getElementById("paymentDataBody").style.display = "block",
+							document.getElementById("paymentDataBodyTitle").innerHTML =
+							'Bank Account Information'
+						// Display responses from CollectJS
+						document.getElementById("paymentData").innerHTML =
+							'Account Name: ' + response.check.name +
+							'<br>Account Number: ' + response.check.account;
+						document.getElementById("ConnectBoosterToken").setAttribute('value', response.token);
+						document.getElementById("ConnectBoosterPaymentType").setAttribute('value', 'ck');
+						// Display Text for adjustments need to set to none by default
+						document.getElementById("adjustmentsEnabled").setAttribute("style", "display: none");
+						paymentInfoACHRender();
+					}
+				});
+			}
+			function payCreditCard() {
+				// Credit Card Base
+				CollectJS.configure({
+					'tokenizationKey': GatewayTokenizationKey,
+					'paymentSelector': '#customCCPayment',
+					'theme': 'material',
+					'primaryColor': '#2F5AA3',
+					'secondaryColor': '#cecece',
+					'buttonText': 'SAVE',
+					'instructionText': 'Enter Credit Card Information Below',
+					'paymentType': 'cc',
+					'callback': function (response) {
+						document.getElementById("paymentDataBody").style.display = "block",
+							document.getElementById("paymentDataBodyTitle").innerHTML =
+							'Credit Card Information'
+						// Display responses from CollectJS
+						document.getElementById("paymentData").innerHTML =
+							'Card Number: ' + response.card.number +
+							'<br>Expiration: ' + response.card.exp
+						document.getElementById("ConnectBoosterToken").setAttribute('value', response.token);
+						document.getElementById("ConnectBoosterPaymentType").setAttribute('value', 'cc');
+						// Display Text for adjustments need to set to none by default
+						document.getElementById("adjustmentsEnabled").setAttribute("style", "display: none");
+						paymentInfoCCRender();
+					},
+				});
+			}
+
+			// Payment Button Options
+			showActivePaymentButtons();
+
+          	$('#customBankAccountPayment').click(function() {
+				CollectJS.startPaymentRequest(payBankAccount());
+			});
+
+          	$('#customCCPayment').click(function() {
+				CollectJS.startPaymentRequest(payCreditCard());
+			});
+
+            $('#paymentClear').click(function() {
+                showActivePaymentButtons();
+                document.getElementById("paymentDataBody").style.display = "none"
+                document.getElementById("ConnectBoosterToken").setAttribute('value', '');
+                document.getElementById("ConnectBoosterPaymentType").setAttribute('value', '');
+                $('#submission').prop('disabled', true);
+                $('#RequiredFieldsMessage').show();
+			});
+
+             function showActivePaymentButtons(){
+                var ccDoc = document.getElementById("customCCPayment");
+                if(ccDoc){
+                    if (PmCcEnabled == "True") {
+                        ccDoc.setAttribute('style', 'display: inline-block;');
+                    } else {
+                        ccDoc.setAttribute('style', 'display: none;');
+                    }
+                }
+
+                var checkDoc = document.getElementById("customBankAccountPayment");
+                if(checkDoc){
+                    if (PmEftEnabled == "True") {
+                        checkDoc.setAttribute('style', 'display: inline-block;');
+                    } else {
+                        checkDoc.setAttribute('style', 'display: none;');
+                    }
+                }
+            }
+		});
+		</script>
+		<!--End ConnectBooster-->
+      	#EndIf()
+		<script type="text/javascript">
+		$(function(){
+				//Show jSignature if on a supported browser
+
+				$('#SignatureRow').show()
+				$('#Signature').jSignature({width:'100%',height:'100%'});
+				$('#ClearButton').click(function() {
+					$('#Signature').jSignature('reset');
+				});
+				$('#Signature').bind('change', function(){
+					$('.uniquesignatureclass').val($('#Signature').jSignature('getData', 'image'));
+				});
+
+			});
+		</script>
+		<script type="text/javascript">
+        $(function () {
+            //Disable all buttons and change text to "Submitting" on click
+            $('form').submit(function (e) {
+                $('input:submit').attr("disabled", true);
+                $('input:submit').attr("value", 'Submitting');
+                return true;
+            });
+
+            //Hide the required graphics when field is filled out/checked
+            $('.req').prev('input').on("keyup change", function () { $(this).val().length ? $(this).next('.req').hide() : $(this).next('.req').show(); })
+            $('.reqcheck').next(':checkbox').on("keyup change", function () { $(this).is(':checked') ? $(this).prev('.reqcheck').hide() : $(this).prev('.reqcheck').show(); })
+
+            //Disable qty input if item is set as optional or not included
+            $(':checkbox').change(function () {
+                ($(this).is(':checked')) ?
+                    $(this).closest('td').next().children(':text').removeAttr("disabled") :
+                    $(this).closest('td').next().children(':text').attr("disabled", "disabled");
+            }).change();
+            $(':radio').change(function () {
+                $(':radio').each(function (i) {
+                    ($(this).is(':checked')) ?
+                        $(this).closest('td').next().children(':text').removeAttr("disabled") :
+                        $(this).closest('td').next().children(':text').attr("disabled", "disabled");
+                });
+            }).change();
+
+
+		    //jQuery payment dropdown for users to choose between CC and Cash/Terms. Defaults to CC. DO NOT DEFAULT TO CASH/TERMS (When user "updates options", will submit form, causing payment processing to set to "none".
+            $('select[name="#Quote.InputOrderPorterPaymentMode"]').change(function () {
+                var value = $('select[name="#Quote.InputOrderPorterPaymentMode"]').val();
+                switch (value) {
+                    case "None":
+                    case "Terms":
+                        $('#payment').hide();
+                        break;
+                    case "ConnectBooster":
+                    case "Authorize.net":
+                    case "Paypal Payflow":
+                        $('#payment').show();
+                        break;
+                    default:
+                }
+            }).change();
+
+
+            $(':input, #Signature').on("keyup change", function () {
+                return validateInputs();
+            }).change();
+
+            function validateInputs() {
+                #UnapprovedBegin()
+                var paymentProcessor = $('select[name="#Quote.InputOrderPorterPaymentMode"]').val();
+                if (paymentProcessor == "ConnectBooster") {
+
+                    document.getElementById("otherPaymentCreditCardFields").setAttribute('style', 'display: none');
+                    document.getElementById("cashtermoption").setAttribute('style', 'display: none');
+                    document.getElementById("connectBoosterButtons").setAttribute('style', 'display: block');
+                } else if (paymentProcessor != undefined) {
+                    document.getElementById("connectBoosterButtons").setAttribute('style', 'display: none');
+                    document.getElementById("cashtermoption").setAttribute('style', 'display: none');
+                    document.getElementById("otherPaymentCreditCardFields").setAttribute('style', 'display: block');
+                }
+
+                if ($('input[name="ApproveOrder"]').is(':checked') && reqFilled()#BeginIf("#Quote.OrderPorterShowSignature","True") && ($('#Signature').jSignature('getData', 'native').length > 0)#EndIf()) {
+                    if (paymentProcessor != "ConnectBooster" || (paymentProcessor == "ConnectBooster" && $('input[name="ConnectBoosterToken"]').val().trim() != '')) {
+                        $('#submission').prop('disabled', false);
+                        $('#RequiredFieldsMessage').hide();
+                        return true;
+                    } else {
+                        blockAcceptButton();
+                    }
+                } else {
+                   blockAcceptButton();
+                }
+                #UnapprovedEnd()
+            }
+
+            function blockAcceptButton(){
+                $('#submission').prop('disabled', true);
+                    $('#RequiredFieldsMessage').show();
+                    return false;
+            }
+            //jquery to disable accept button until all required fields are filled out
+            function reqFilled() {
+                var filled = true;
+                $('.FieldName').each(function () {
+                    if ($(this).val().trim() == '') {
+                        filled = false;
+                    }
+                });
+                return filled;
+            }
+
+          	$('#Signature').on("keyup change", function(){
+                if($('#Signature').jSignature('getData', 'native').length > 0){
+                    $('#sigReq').hide();
+                }
+                else{
+                    $('#sigReq').show();
+                }
+            }).change();
+        });
+
+    </script>
+	</head>
+	<body>
+<!--  BEGIN PAGE CONTAINER  -->
+		<div class = "Container" id = "Container">
+		#Quote.BeginFormHtml()
+<!--  BANNER AND LOGO  -->
+			<div class = "Banner"><div class="LogoContainer"><span class="helper"></span><img src="#Location.Logo" class="Logo" /></div></div>
+<!--  BEGIN INTRODUCTION  -->
+			<div style="margin: 5px 0;">
+				<div class="IntroLeft PrimaryColor"><h2 class = "Left h2Title" style="line-height:1.8em;">#Quote.QuoteName</h2></div>
+				<div class="IntroRight AccentColor"><h2 class = "Center h2Number" style="line-height:1.8em;">Quote #: #Quote.PrintedquoteReadableID v#Quote.Version</h2></div>
+				<div class = "Clear"></div> <!-- Used for formatting -->
+			</div>
+			<div>
+				<div class="IntroLeft" style="min-height:160px;">
+					<div class="FLeft" style="width:50%;">
+						<p><span style="color:#44618D;">Prepared For</span><br/>
+						#BeginIfNot("#Customer.AccountName","")<span class = "Name Bold">#Customer.AccountName</span><br/>#EndIfNot()
+						#Customer.FirstName #Customer.LastName<br />
+						#BeginIfNot("#Customer.Address1#Customer.Address2","")#Customer.Address1 #Customer.Address2<br />#EndIfNot()
+						#BeginIfNot("#Customer.City#Customer.State#Customer.PostalCode","")#Customer.City, #Customer.State #Customer.PostalCode#EndIfNot()</p>
+						<p><span style="font-weight:bold;">P:</span>   #Customer.DayPhone<br/>
+						<span style="font-weight:bold;">E:</span>   #Customer.EmailAddress</p>
+					</div>
+					<div class="FRight" style="width:50%;">
+						<p><span style="color:#44618D;">Prepared By</span><br/>
+						<span class = "Name Bold">#Location.LocationName</span><br/>
+						#Salesrep.FirstName #Salesrep.LastName<br />
+						#Location.Address1 #Location.Address2<br />
+						#Location.City, #Location.State #Location.PostalCode</p>
+						<p><span style="font-weight:bold;">P:</span>   #Salesrep.Phone<br/>
+						<span style="font-weight:bold;">E:</span>   #Salesrep.EmailAddress</p>
+					</div>
+				</div>
+				<div class="IntroRight" style="min-height:160px;">
+					<div class="FLeft" style="width:50%;">
+						<p><span style="color:#44618D;">Date Issued:</span><br/><span style="font-weight:bold;">#Quote.ModifyDate.Date</p><p><span style="color:#44618D;">Expires:</span><br/><span style="font-weight:bold;">#Quote.ExpirationDate.Date</span></p>
+					</div>
+					<div class="FRight" style="width:50%;">
+						<a target="_blank" href="https://www.orderporter.com/orderporterpdf/#Quote.OrderPorterPasscode.#DocExtension()"><img src="https://www.orderporter.com/cust/NewTemplates/pdf-logo.png" class = "PDF" id = "PDF"/></a>
+					</div>
+					<div class = "Clear Center">
+						<a target="_blank" href="https://www.orderporter.com/orderporterpdf/#Quote.OrderPorterPasscode.#DocExtension()"><h1>View and Download Your Quote PDF</h1></a>
+					</div>
+				</div>
+			</div>
+			<div class = "Clear"></div> <!-- Used for formatting -->
+			<!-- This section alerts the user to sign the terms in Section 3: Approval and E-Payment.
+				If the quote has been approved, the image and verbiage will not display. Instead, an approval message with a green checkmark will display.-->
+			#UnapprovedBegin()
+			<div class = "Panel UnapprovedPanel" style = "margin: 5px 0 0 0;">
+				<a href='#Approve'>This quote has not been approved. Please review the terms, and sign below.</a>
+			</div>
+			#UnapprovedEnd()
+			#ApprovedBegin()
+			<div class = "Panel ApprovedPanel" style = "margin: 5px 0 0 0;">
+				<img src='https://www.orderporter.com/cust/NewTemplates/completed.png' class = "completed"  />This quote has been approved.
+			</div>
+			#ApprovedEnd()
+			#BeginIfNot("#ErrorMessage()","")
+			<div class = "Panel ErrorPanel" style = "margin: 5px 0 0 0;">
+				#ErrorMessage()
+			</div>
+			#EndIfNot()
+			#ExpiredBegin()
+			<div class = "Panel WarningPanel" style = "margin: 5px 0 0 0;">
+				This quote has expired. Contact your sales representative.
+			</div>
+			#ExpiredEnd()
+<!--  END INTRODUCTION  -->
+			<div class = "Clear"></div> <!-- Used for formatting -->
+<!--  BEGIN LEFT COLUMN  -->
+			<div class = "LeftColumn">
+<!--  BEGIN STEP 2. REVIEW OPTIONS  -->
+				<div class = "Panel">
+					<div class="SilverHeader">
+						<h2>Review #BeginIf2("#Quote.OrderPorterShowItemCb","True")and Select #EndIf2()#BeginIf2("#Quote.OrderPorterShowItemCb","False")#BeginIf3("#Quote.OrderPorterShowQty","True")and Select #EndIf3()#EndIf2()Your Options</h2>
+					</div>
+<!--  BEGIN QUOTE NOTES  -->
+					<div class="SilverPanel">
+	<!--  END QUOTE NOTES  -->
+						<p class = "SubHeader Bold">Your Available Options</p>
+	<!--  BEGIN ACCORDION  -->
+						<div>
+					<!-- If the checkbox for Show Line Item Details is checked, begin Iterating through the tabs -->
+						#BeginIf5("#Quote.OrderPorterShowLineDetails","True")
+						#BeginTab("IsEmpty==False;TotalQuantity!=0;")
+	<!--  BEGIN ITEM LEVEL TABLES  -->
+							<div #BeginIf("#Tab.GridFormat","Pre Outline")style="display:none;"#EndIf() #BeginIf("#Tab.GridFormat","Post Outline")style="display:none;"#EndIf()>
+                              	<div>
+                                  	<p style="margin:14px 0 3px;">
+									<span style="font-size:18px !important;">#Tab.TabName</span>
+									#BeginIf("#Tab.IsOptional","True")<span class="ImportantMessage">Optional</span>#EndIf()
+									#BeginIfNot("#Tab.IsOptional","True")
+										#BeginIfNot2("#Tab.Subtotal","#Tab.SubtotalPlusOptions")#BeginIf2("#Tab.RecurringSubtotal","#Tab.RecurringPlusOptions")<span class="ImportantMessage">Contains Optional Items</span>#EndIf2()#EndIfNot2()
+										#BeginIfNot2("#Tab.RecurringSubtotal","#Tab.RecurringPlusOptions")#BeginIf2("#Tab.Subtotal","#Tab.SubtotalPlusOptions")<span class="ImportantMessage">Contains Optional Items</span>#EndIf2()#EndIfNot2()
+										#BeginIfNot2("#Tab.Subtotal","#Tab.SubtotalPlusOptions")#BeginIfNot3("#Tab.RecurringSubtotal","#Tab.RecurringPlusOptions")<span class="ImportantMessage">Contains Optional Items</span>#EndIfNot3()#EndIfNot2()
+									#EndIfNot()
+									#BeginIfNot("#Tab.TabNotes", "")
+                                      	<br/><span class="TabSubTitle">#Tab.TabNotes</span>
+									#EndIfNot()
+                                    </p>
+								</div>
+                             #BeginIf6("#Tab.UsingDefaultLayout","False")
+
+                              	<table style="font-size:0.75rem;">
+									<!--Table header-->
+									<tr class = "TabDetailRow theader">
+									#BeginIf2("#Quote.OrderPorterShowItemCb","True")
+										<th class = "ChBx tHead" #BeginIfNot("#Tab.OrderPorterRequired","False")style="display:none;"#EndIfNot()></th>
+									#EndIf2()
+									#BeginTabLayout()
+										<th align="#TabLayoutColumn.TextAlignment" class="thead" style="width: calc(((#TabLayoutColumn.Width% / #Tab.OutputGridLayoutTotalWidth)*100));max-width: calc(((#TabLayoutColumn.Width% / #Tab.OutputGridLayoutTotalWidth)*100));">#TabLayoutColumn.DisplayName</th>
+									#EndTabLayout()
+									</tr>
+									#BeginItem("TestDynamicGrid")
+										#BeginIf("#Item.LineType","Comment")
+										<!--Comment Lines-->
+										<tr>
+											<td colspan="100">#Item.ItemNotesHtml</td>
+										</tr>
+										#EndIf()
+									#BeginIf("#Item.LineType","")
+                                  		<div style="display:none;">
+                                  		#BeginIf2("#Item.Quantity","0")
+                                          	#BeginIf3("#Quote.OrderPorterShowItemCb","True")
+                                  				#Item.GenOptionalCheckbox()
+                                          	#EndIf3()
+                                  		#EndIf2()
+                                        </div>
+										#BeginIfNot5("#Item.Quantity","0")
+											<!--Normal Items-->
+											<tr class = "TabDetailRow #BeginIf2('#Item.IsPackageItem','True')PackageItem#EndIf2() #BeginIf2('#Item.IsPackageHeader','True')PackageHeader#EndIf2() #BeginIfNot('#Item.IsPackageItem','True')#BeginIf4('#Item.IsOptional','True')Optional#EndIf4()#EndIfNot()" >
+											#BeginIf2("#Quote.OrderPorterShowItemCb","True")
+												<td class ="Center" style='#IfReplace("#Tab.OrderPorterRequired", "True", "display:none;")'>
+													<span style='#IfReplace("#Item.IsPackageItem", "True", "display:none;")'>
+														<span style='#IfReplace("#Item.OptionLocked","True", "display:none;")'>
+															#Item.GenOptionalCheckbox()
+														</span>
+													</span>
+												</td>
+											#EndIf2()
+											#BeginTabLayout()
+												<td align="#TabLayoutColumn.TextAlignment">
+												#BeginIf2("#TabLayoutColumn.FieldName","ProductDetails")#BeginIf3("#Quote.OrderPorterShowImage","True")<div class="ProductDetailsImg"><img src="#Item.Thumbnail"/></div>#EndIf3()<div class="ProductDetails">#Item.LongDescription #BeginIfNot("#Item.IsPackageItem","True")#BeginIf3("#Item.IsOptional","True")<span class="TextAccentColor">(Optional)</span>#EndIf3()#EndIfNot()</div>#EndIf2()
+												#BeginIfNot("#TabLayoutColumn.FieldName","ProductDetails")#BeginIfNot2("#TabLayoutColumn.FieldName","Quantity")#BeginIfNot3("#TabLayoutColumn.FieldName","ItemNotes")#BeginIfNot4("#TabLayoutColumn.FieldName","Thumbnail")#BeginIfNot6("#TabLayoutColumn.FieldName","Picture")#BeginIfNot7("#TabLayoutColumn.FieldName","Z_customPicture1")#BeginIfNot8("#TabLayoutColumn.FieldName","Z_customPicture2")#BeginIfNot9("#TabLayoutColumn.FieldName","Z_customPicture3")#BeginIfNot10("#TabLayoutColumn.FieldName","Z_customPicture4")#Item.#TabLayoutColumn.PrintedFieldName#EndIfNot10()#EndIfNot9()#EndIfNot8()#EndIfNot7()#EndIfNot6()#EndIfNot4()#EndIfNot3()#EndIfNot2()#EndIfNot()
+								      			#BeginIf2("#TabLayoutColumn.FieldName","Thumbnail")<img style="max-width:100%;" src="#Item.#TabLayoutColumn.PrintedFieldName"/>#EndIf2()
+                                                #BeginIf2("#TabLayoutColumn.FieldName","Picture")<img style="max-width:100%;" src="#Item.#TabLayoutColumn.PrintedFieldName"/>#EndIf2()
+                                                #BeginIf2("#TabLayoutColumn.FieldName","Z_customPicture1")<img style="max-width:100%;" src="#Item.#TabLayoutColumn.PrintedFieldName"/>#EndIf2()
+                                                #BeginIf2("#TabLayoutColumn.FieldName","Z_customPicture2")<img style="max-width:100%;" src="#Item.#TabLayoutColumn.PrintedFieldName"/>#EndIf2()
+                                                #BeginIf2("#TabLayoutColumn.FieldName","Z_customPicture3")<img style="max-width:100%;" src="#Item.#TabLayoutColumn.PrintedFieldName"/>#EndIf2()
+                                                #BeginIf2("#TabLayoutColumn.FieldName","Z_customPicture4")<img style="max-width:100%;" src="#Item.#TabLayoutColumn.PrintedFieldName"/>#EndIf2()
+                                                #BeginIf2("#TabLayoutColumn.FieldName","ItemNotes")#Item.ItemNotesHtml#EndIf2()
+                                                #BeginIf7("#TabLayoutColumn.FieldName","Quantity")
+												<!---------------------------- QTY ------------------------->
+													#BeginIf2("#Quote.OrderPorterShowQty","True")
+													    #BeginIf3("#Tab.OrderPorterRequired","False")
+															#BeginIfNot4("#Item.OptionLocked","True")
+																#BeginIfNot3("#Item.IsPackageItem","True")
+																	#UnapprovedBegin()
+																		<input type="text" name="#Item.InputQuantity" size=4 value="#Item.Quantity" style='border: 1px solid #222222; text-align:center; margin: 0 auto;'/>
+																	#UnapprovedEnd()
+																	#ApprovedBegin()
+																		#Item.Quantity
+																	#ApprovedEnd()
+																	#ExpiredBegin()
+																		#Item.Quantity
+																	#ExpiredEnd()
+																#EndIfNot3()
+																#BeginIf4("#Item.IsPackageItem","True")
+																	#Item.Quantity
+																#EndIf4()
+															#EndIfNot4()
+															#BeginIf4("#Item.OptionLocked","True")
+																#Item.Quantity
+															#EndIf4()
+														#EndIf3()
+														#BeginIf3("#Tab.OrderPorterRequired","True")
+														  #Item.Quantity
+														#EndIf3()
+													#EndIf2()
+													#BeginIf2("#Quote.OrderPorterShowQty","False")
+														#Item.Quantity
+													#EndIf2()
+												<!---------------------------- QTY ------------------------->
+												#EndIf7()
+												</td>
+											#EndTabLayout()
+										</tr>
+										#EndIfNot5()
+									#EndIf()
+									#BeginIf("#Item.LineType","SubHeader")
+									<!--Subheaders-->
+									<tr class = "TabDetailRow SubHeadRow">
+									#BeginIf2("#Quote.OrderPorterShowItemCb","True")
+										<td class = "Center ChBx" style='#IfReplace("#Tab.OrderPorterRequired", "True", "display:none;")'><span style="display:none;">#Item.GenOptionalCheckbox()</span></td>
+									#EndIf2()
+									#BeginTabLayout()
+										<td align="#TabLayoutColumn.TextAlignment">
+											#BeginIf2("#TabLayoutColumn.FieldName","ProductDetails")#BeginIf3("#Quote.OrderPorterShowImage","True")<div class="ProductDetailsImg"><img src="#Item.Thumbnail"/></div>#EndIf3()<div class="ProductDetails">#Item.LongDescription</div>#EndIf2()
+											#BeginIf2("#TabLayoutColumn.FieldName","LongDescription")#Item.#TabLayoutColumn.PrintedFieldName#EndIf2()
+											#BeginIf2("#TabLayoutColumn.FieldName","ShortDescription")#Item.#TabLayoutColumn.PrintedFieldName#EndIf2()
+										</td>
+									#EndTabLayout()
+									</tr>
+									#EndIf()
+									#BeginIf("#Item.LineType","SubFooter")
+									<!--Subfooters-->
+									<tr class = "TabDetailRow SubFootRow">
+									#BeginIf2("#Quote.OrderPorterShowItemCb","True")
+										<td class = "Center ChBx" style='#IfReplace("#Tab.OrderPorterRequired", "True", "display:none;")'><span style="display:none;">#Item.GenOptionalCheckbox()</span></td>
+									#EndIf2()
+									#BeginTabLayout()
+										<td align="#TabLayoutColumn.TextAlignment">
+											#BeginIf2("#TabLayoutColumn.FieldName","ProductDetails")#BeginIf3("#Quote.OrderPorterShowImage","True")<div class="ProductDetailsImg"><img src="#Item.Thumbnail"/></div>#EndIf3()<div class="ProductDetails">#Item.LongDescription</div>#EndIf2()
+											#BeginIf2("#TabLayoutColumn.FieldName","LongDescription")#Item.#TabLayoutColumn.PrintedFieldName#EndIf2()
+											#BeginIf2("#TabLayoutColumn.FieldName","ShortDescription")#Item.#TabLayoutColumn.PrintedFieldName#EndIf2()
+											#BeginIf2("#TabLayoutColumn.FieldName","RecurringTotal")#Item.#TabLayoutColumn.PrintedFieldName#EndIf2()
+											#BeginIf2("#TabLayoutColumn.FieldName","ExtendedPrice")#Item.#TabLayoutColumn.PrintedFieldName#EndIf2()
+										</td>
+									#EndTabLayout()
+									</tr>
+									#EndIf()
+									#EndItem()
+								</table>
+								<!--Table footer-->
+								#BeginIfNot("#Tab.RecurringPlusOptions#Tab.SubtotalPlusOptions","00")
+								<table style="font-size:0.75rem;">
+								  #BeginIfNot2("#Tab.RecurringPlusOptions","0")
+								  <tr class = "TabDetailRow tfooter">
+									<td class="tfoot Right bdrRgt">Recurring Subtotal</td>
+									<td class="tfoot Right" style="width:100px;">#Tab.PrintedRecurringSubtotal</td>
+								  </tr>
+								  #EndIfNot2()
+								  #BeginIfNot2("#Tab.SubtotalPlusOptions","0")
+								  <tr class = "TabDetailRow tfooter">
+									<td class="tfoot Right bdrRgt">Subtotal</td>
+									<td class="tfoot Right" style="width:100px;">#Tab.PrintedSubtotal</td>
+								  </tr>
+								  #EndIfNot2()
+								</table>
+								#EndIfNot()
+
+                            #EndIf6()
+                            #BeginIfNot6("#Tab.UsingDefaultLayout","False")
+								<table style="font-size:0.75rem;">
+								<!-- Begin Table Header. This is the first row of the table inside an accordion panel. -->
+									<tr class = "TabDetailRow theader">
+										#BeginIf2("#Quote.OrderPorterShowItemCb","True")
+										<th class = "ChBx tHead" #BeginIfNot("#Tab.OrderPorterRequired","False")style="display:none;"#EndIfNot()></th>
+										#EndIf2()
+										<th class = "Left tHead" #BeginIf2("#Quote.OrderPorterShowImage","True")colspan="2" #EndIf2()>Description</th>
+										<th class = "Price tHead Right" #BeginIf("#Tab.RecurringPlusOptions","0")#BeginIf2("#Tab.RecurringSuggestedTotal","0")#BeginIf3("#Tab.RecurringCost","0")style="display:none;"#EndIf3()#EndIf2()#EndIf()>Recurring</th>
+										<th class = "Price tHead Right"  #BeginIf("#Tab.SubtotalPlusOptions","0")#BeginIf2("#Tab.SuggestedTotal","0")#BeginIf3("#Tab.Cost","0")style="display:none;"#EndIf3()#EndIf2()#EndIf()>Price</th>
+										<th class = "Qty tHead #BeginIf('#Tab.SubtotalPlusOptions','0')#BeginIf2('#Tab.RecurringPlusOptions','0')bdrRgt#EndIf2()#EndIf()">Qty</th>
+										<th class = "Price tHead Right #BeginIf('#Tab.SubtotalPlusOptions','0')bdrRgt#EndIf()" #BeginIf("#Tab.RecurringPlusOptions","0")#BeginIf2("#Tab.RecurringSuggestedTotal","0")#BeginIf3("#Tab.RecurringCost","0")style="display:none;"#EndIf3()#EndIf2()#EndIf()>Ext. Recurring</th>
+										<th class = "Price tHead Right bdrRgt"  #BeginIf("#Tab.SubtotalPlusOptions","0")#BeginIf2("#Tab.SuggestedTotal","0")#BeginIf3("#Tab.Cost","0")style="display:none;"#EndIf3()#EndIf2()#EndIf()>Ext. Price</th>
+									</tr>
+								<!-- End Table Header -->
+								<!-- Begin Iterating through the Items. -->
+									#BeginItem("TabItems")
+									<!-- Begin Comment Line -->
+									#BeginIf("#Item.LineType","Comment")
+										<tr>
+											<td colspan="100%">#BeginIfNot("#Item.ItemNotesPlain","")#Item.ItemNotesHtml#EndIfNot()</td>
+										</tr>
+									#EndIf()
+									<!-- End Comment Line -->
+
+									<!-- Begin Normal Item (Line type is blank) -->
+										#BeginIf("#Item.LineType","")
+                                  			<div style="display:none;">
+                                            #BeginIf2("#Item.Quantity","0")
+                                                #BeginIf3("#Quote.OrderPorterShowItemCb","True")
+                                                    #Item.GenOptionalCheckbox()
+                                                #EndIf3()
+                                            #EndIf2()
+                                            </div>
+											#BeginIfNot5("#Item.Quantity","0")
+											<tr class = "TabDetailRow #BeginIf2('#Item.IsPackageItem','True')PackageItem#EndIf2() #BeginIf2('#Item.IsPackageHeader','True')PackageHeader#EndIf2() #BeginIfNot('#Item.IsPackageItem','True')#BeginIf4('#Item.IsOptional','True')Optional#EndIf4()#EndIfNot()" >
+												#BeginIf2("#Quote.OrderPorterShowItemCb","True")
+												<td class ="Center White" style='#IfReplace("#Tab.OrderPorterRequired", "True", "display:none;")'>
+													<span style='#IfReplace("#Item.IsPackageItem", "True", "display:none;")'>
+														<span style='#IfReplace("#Item.OptionLocked","True", "display:none;")'>
+															#Item.GenOptionalCheckbox()
+														</span>
+													</span>
+												</td>
+												#EndIf2()
+												<td class="Center Thumb" #BeginIf2("#Quote.OrderPorterShowImage","False")style="display:none;"#EndIf2()>#BeginIfNot2("#Item.Thumbnail","")<img src="#Item.Thumbnail" style="max-width:60px;max-height:60px;"/>#EndIfNot2()</td>
+												<td>#Item.LongDescription #BeginIfNot("#Item.IsPackageItem","True")#BeginIf2("#Item.IsOptional","True")<span class="ImportantMessage">(Optional)</span>#EndIf2()#EndIfNot()</td>
+												<td class = "Right" #BeginIf4("#Tab.RecurringPlusOptions","0")#BeginIf2("#Tab.RecurringSuggestedTotal","0")#BeginIf3("#Tab.RecurringCost","0")style="display:none;"#EndIf3()#EndIf2()#EndIf4()>#Item.PrintedRecurringCalculatedPrice</td>
+												<td class = "Right" #BeginIf4("#Tab.SubtotalPlusOptions","0")#BeginIf2("#Tab.SuggestedTotal","0")#BeginIf3("#Tab.Cost","0")style="display:none;"#EndIf3()#EndIf2()#EndIf4()>#Item.PrintedPrice</td>
+												#BeginIf2("#Quote.OrderPorterShowQty","True")
+													#BeginIf3("#Tab.OrderPorterRequired","False")
+													<td class = "Center Qty">
+														#BeginIfNot4("#Item.OptionLocked","True")
+															#BeginIfNot3("#Item.IsPackageItem","True")
+																#UnapprovedBegin()
+																	<input type="text" name="#Item.InputQuantity" size=4 value="#Item.Quantity" style='border: 1px solid #222222; text-align:center; margin: 0 auto;'/>
+																#UnapprovedEnd()
+																#ApprovedBegin()
+																	#Item.Quantity
+																#ApprovedEnd()
+																#ExpiredBegin()
+																	#Item.Quantity
+																#ExpiredEnd()
+															#EndIfNot3()
+															#BeginIf4("#Item.IsPackageItem","True")
+																#Item.Quantity
+															#EndIf4()
+														#EndIfNot4()
+														#BeginIf4("#Item.OptionLocked","True")
+															#Item.Quantity
+														#EndIf4()
+													</td>
+													#EndIf3()
+													#BeginIf3("#Tab.OrderPorterRequired","True")
+													<td class = "Center Qty">
+														#Item.Quantity
+													</td>
+													#EndIf3()
+												#EndIf2()
+												#BeginIf2("#Quote.OrderPorterShowQty","False")
+												<td class = "Center Qty">#Item.Quantity</td>
+												#EndIf2()
+												<td class = "Right" #BeginIf4("#Tab.RecurringPlusOptions","0")#BeginIf2("#Tab.RecurringSuggestedTotal","0")#BeginIf3("#Tab.RecurringCost","0")style="display:none;"#EndIf3()#EndIf2()#EndIf4()>#Item.PrintedRecurringTotal</td>
+												<td class = "Right" #BeginIf4("#Tab.SubtotalPlusOptions","0")#BeginIf2("#Tab.SuggestedTotal","0")#BeginIf3("#Tab.Cost","0")style="display:none;"#EndIf3()#EndIf2()#EndIf4()>#Item.PrintedExtendedPrice</td>
+											</tr>
+											#EndIfNot5()
+										#EndIf()
+									<!-- End Normal Item -->
+									<!-- Begin Sub Header. (Line type is SubHeader) -->
+										#BeginIf("#Item.LineType","SubHeader")
+										<tr class = "TabDetailRow SubHeadRow">
+											#BeginIf2("#Quote.OrderPorterShowItemCb","True")
+											<td class = "Center ChBx" style='#IfReplace("#Tab.OrderPorterRequired", "True", "display:none;")'><span style="display:none;">#Item.GenOptionalCheckbox()</span></td>
+											#EndIf2()
+											<td class="Center Thumb" #BeginIf2("#Quote.OrderPorterShowImage","False")style="display:none;"#EndIf2()></td>
+											<td>#Item.LongDescription</td>
+											<td class = "Right" #BeginIf4("#Tab.RecurringPlusOptions","0")#BeginIf2("#Tab.RecurringSuggestedTotal","0")#BeginIf3("#Tab.RecurringCost","0")style="display:none;"#EndIf3()#EndIf2()#EndIf4()></td>
+											<td class = "Right" #BeginIf4("#Tab.SubtotalPlusOptions","0")#BeginIf2("#Tab.SuggestedTotal","0")#BeginIf3("#Tab.Cost","0")style="display:none;"#EndIf3()#EndIf2()#EndIf4()></td>
+											<td class = "Center"></td>
+											<td class = "Right" #BeginIf4("#Tab.RecurringPlusOptions","0")#BeginIf2("#Tab.RecurringSuggestedTotal","0")#BeginIf3("#Tab.RecurringCost","0")style="display:none;"#EndIf3()#EndIf2()#EndIf4()></td>
+											<td class = "Right" #BeginIf4("#Tab.SubtotalPlusOptions","0")#BeginIf2("#Tab.SuggestedTotal","0")#BeginIf3("#Tab.Cost","0")style="display:none;"#EndIf3()#EndIf2()#EndIf4()></td>
+										</tr>
+										#EndIf()
+									<!-- End Sub Header -->
+									<!-- Begin Sub Footer (Line type is SubFooter) -->
+										#BeginIf("#Item.LineType","SubFooter")
+										<tr class = "TabDetailRow SubFootRow">
+											#BeginIf2("#Quote.OrderPorterShowItemCb","True")
+											<td class = "Center ChBx" style='#IfReplace("#Tab.OrderPorterRequired", "True", "display:none;")'><span style="display:none;">#Item.GenOptionalCheckbox()</span></td>
+											#EndIf2()
+											<td class="Center Thumb" #BeginIf2("#Quote.OrderPorterShowImage","False")style="display:none;"#EndIf2()></td>
+											<td>#Item.LongDescription</td>
+											<td class = "Right" #BeginIf4("#Tab.RecurringPlusOptions","0")#BeginIf2("#Tab.RecurringSuggestedTotal","0")#BeginIf3("#Tab.RecurringCost","0")style="display:none;"#EndIf3()#EndIf2()#EndIf4()></td>
+											<td class = "Right" #BeginIf4("#Tab.SubtotalPlusOptions","0")#BeginIf2("#Tab.SuggestedTotal","0")#BeginIf3("#Tab.Cost","0")style="display:none;"#EndIf3()#EndIf2()#EndIf4()></td>
+											<td class = "Center"></td>
+											<td class = "Right" #BeginIf4("#Tab.RecurringPlusOptions","0")#BeginIf2("#Tab.RecurringSuggestedTotal","0")#BeginIf3("#Tab.RecurringCost","0")style="display:none;"#EndIf3()#EndIf2()#EndIf4()>#Item.PrintedRecurringTotal</td>
+											<td class = "Right" #BeginIf4("#Tab.SubtotalPlusOptions","0")#BeginIf2("#Tab.SuggestedTotal","0")#BeginIf3("#Tab.Cost","0")style="display:none;"#EndIf3()#EndIf2()#EndIf4()>#Item.PrintedPrice</td>
+										</tr>
+										#EndIf()
+									<!-- End Sub Footer -->
+									#EndItem()
+								<!-- End interating through the items -->
+								<!-- Begin the table footer. This is the final row of the table in an accordion panel. -->
+									<tr class = "TabDetailRow tfooter">
+										#BeginIf("#Quote.OrderPorterShowItemCb","True")
+										<td class="tFoot" #BeginIfNot("#Tab.OrderPorterRequired","False")style="display:none;"#EndIfNot()></td>
+										#EndIf()
+                                      	<td class = "tFoot Center" #BeginIf2("#Quote.OrderPorterShowImage","False")style="display:none;"#EndIf2()></td>
+										<td class="tFoot Center" ></td>
+										<td class="tFoot Right" #BeginIf4("#Tab.RecurringPlusOptions","0")#BeginIf2("#Tab.RecurringSuggestedTotal","0")#BeginIf3("#Tab.RecurringCost","0")style="display:none;"#EndIf3()#EndIf2()#EndIf4()></td>
+										<td class="tFoot" #BeginIf4("#Tab.SubtotalPlusOptions","0")#BeginIf2("#Tab.SuggestedTotal","0")#BeginIf3("#Tab.Cost","0")style="display:none;"#EndIf3()#EndIf2()#EndIf4()></td>
+										<td class="tFoot Right" style="border-right:1px solid black;">Subtotal</td>
+										<td class="tFoot Right bdrRgt" #BeginIf4("#Tab.RecurringPlusOptions","0")#BeginIf2("#Tab.RecurringSuggestedTotal","0")#BeginIf3("#Tab.RecurringCost","0")style="display:none;"#EndIf3()#EndIf2()#EndIf4()>#Tab.PrintedRecurringSubtotal</td>
+										<td class="tFoot Right bdrRgt" #BeginIf4("#Tab.SubtotalPlusOptions","0")#BeginIf2("#Tab.SuggestedTotal","0")#BeginIf3("#Tab.Cost","0")style="display:none;"#EndIf3()#EndIf2()#EndIf4()>#Tab.PrintedSubtotal</td>
+									</tr>
+								<!-- End table footer -->
+								</table>
+                            #EndIfNot6()
+							</div>
+
+							#EndTab()
+						<!-- End iterating through the tabs -->
+							#EndIf5()
+	<!--  END ITEM LEVEL TABLES  -->
+						</div>
+	<!--  END ACCORDION  -->
+	<!--  BEGIN SUMMARY TABLE  -->
+						<table class = "TotalsTable">
+						<!-- Begin summary table header. This is the first row of the table. -->
+							<tr class = "TotalsHeaderRow theader">
+								#BeginIf2("#Quote.OrderPorterShowTabCb","True")<th class = "Center tHead ChBx"></th>#EndIf2()
+								<th class = "tHead Left ">Quote Summary</th>
+								#BeginIfNot("#Quote.RecurringPlusOptions","0")<th class = "tHead Right Price">Recurring</th>#EndIfNot()
+								<th class = "Right Price tHead">One-Time</th>
+							</tr>
+						<!-- End summary table header -->
+						<!-- Begin iterating through non-empty tabs -->
+							#BeginTab("IsEmpty!=True;TotalQuantity!=0;")
+							<tr #BeginIf2("#Tab.IsTotalsIncluded","False")style="display:none;"#EndIf2() #BeginIf2("#Tab.GridFormat","Pre Outline")style="display:none;"#EndIf2() #BeginIf2("#Tab.GridFormat","Post Outline")style="display:none;"#EndIf2()>
+								#BeginIf2("#Quote.OrderPorterShowTabCb","True")<td class="Center">#Tab.GenOptionalCheckbox()</td>#EndIf2()
+								<td class='Left #BeginIfNot("#Tab.IsOptional","False") Optional#EndIfNot()'>#Tab.TabName Subtotal</td>
+								#BeginIfNot2("#Quote.RecurringPlusOptions","0")
+									<td class='Right #BeginIfNot("#Tab.IsOptional","False") Optional#EndIfNot()'>
+										#BeginIfNot3("#Tab.IsOptional","True")
+											#Tab.PrintedRecurringSubtotal
+										#EndIfNot3()
+										#BeginIf3("#Tab.IsOptional","True")
+											#Tab.RecurringPlusOptions.Currency
+										#EndIf3()
+									</td>
+								#EndIfNot2()
+								<td class='Right#BeginIfNot("#Tab.IsOptional","False") Optional#EndIfNot()'>
+									#BeginIfNot2("#Tab.IsOptional","True")
+										#Tab.PrintedSubtotal
+									#EndIfNot2()
+									#BeginIf2("#Tab.IsOptional","True")
+										#Tab.PrintedSubtotalPlusOptions
+									#EndIf2()
+								</td>
+							</tr>
+							#EndTab()
+						<!-- End tab iteration -->
+						<!-- Begin section with subtotal, tax, shipping, etc. -->
+							<tr class = "TotalsRow">
+								#BeginIf("#Quote.OrderPorterShowTabCb","True")<td class = "ChBx"></td>#EndIf()
+								<td>Subtotal</td>
+								<td class = "Right Bold" #BeginIf("#Quote.RecurringPlusOptions","0")style="display:none;"#EndIf()>#Quote.PrintedRecurringSubtotal</td>
+								<td class = "Right Bold">#BeginIfNot("#Quote.Subtotal", "0")#Quote.PrintedSubtotal#EndIfNot()</td>
+							</tr>
+                         	 #BeginIfNot("#Quote.ShippingSubtotal", "0")
+							<tr class = "TotalsRow">
+								#BeginIf("#Quote.OrderPorterShowTabCb","True")<td class = "ChBx"></td>#EndIf()
+								<td>Shipping</td>
+								<td class = "Right Bold" #BeginIf("#Quote.RecurringPlusOptions","0")style="display:none;"#EndIf()></td>
+								<td class="Right Bold">#Quote.PrintedShippingSubtotal</td>
+							</tr>
+							#EndIfNot()
+							#HasTaxBegin()
+							<tr class = "TotalsRow">
+								#BeginIf("#Quote.OrderPorterShowTabCb","True")<td class = "ChBx"></td>#EndIf()
+								<td>#Format.TaxLabel</td>
+								<td class = "Right Bold" #BeginIf("#Quote.RecurringPlusOptions","0")style="display:none;"#EndIf()>#Quote.PrintedRecurringTax</td>
+								<td class = "Right Bold">#BeginIfNot("#Quote.Subtotal", "0")#Quote.PrintedTaxWithShipping#EndIfNot()</td>
+							</tr>
+							#HasTaxEnd()
+							#HasGSTBegin()
+							<tr class = "TotalsRow">
+								#BeginIf("#Quote.OrderPorterShowTabCb","True")<td class = "ChBx"></td>#EndIf()
+								<td>#Format.GSTLabel</td>
+								<td class = "Right Bold" #BeginIf("#Quote.RecurringPlusOptions","0")style="display:none;"#EndIf()>#Quote.PrintedRecurringGst</td>
+								<td class = "Right Bold">#Quote.PrintedGst</td>
+							</tr>
+							#HasGSTEnd()
+							#HasPSTBegin()
+							<tr class = "TotalsRow">
+								#BeginIf("#Quote.OrderPorterShowTabCb","True")<td class = "ChBx"></td>#EndIf()
+								<td>#Format.PSTLabel</td>
+								<td class = "Right Bold" #BeginIf("#Quote.RecurringPlusOptions","0")style="display:none;"#EndIf()>#Quote.PrintedRecurringPst</td>
+								<td class="Right Bold">#Quote.PrintedPst</td>
+							</tr>
+							#HasPSTEnd()
+						<!-- End subtotaling section -->
+						<!-- Begin totals row. This is the final row in the summary table. -->
+							<tr class = "TotalsRow">
+								#BeginIf("#Quote.OrderPorterShowTabCb","True")<td class = "ChBx"></td>#EndIf()
+								<td class="Left">Total Amount</td>
+								<td class="Right Bold" #BeginIf("#Quote.RecurringPlusOptions","0")style="display:none;"#EndIf()>#Quote.PrintedRecurringTotal</td>
+								<td class="Right Bold">#Quote.PrintedQuoteTotal</td>
+							</tr>
+						<!-- End totals row -->
+						</table>
+						<div class = Line></div>
+                      	<!-- BEGIN UPDATE OPTIONS BUTTON FOR OPTIONS -->
+                      	#BeginIfNot("#Quote.OrderPorterShowTabCb#Quote.OrderPorterShowItemCb#Quote.OrderPorterShowQty","FalseFalseFalse")
+						<div class = "UpdateButton">
+							<div>#UnapprovedBegin()<input class="btn" type="submit" value="Update Options" />#UnapprovedEnd()</div>
+						</div>
+                      	#EndIfNot()
+                      	<!--  END UPDATE OPTIONS BUTTON FOR OPTIONS -->
+	<!-- END TOTALS SUMMARY TABLE -->
+	<!-- BEGIN TERMS & FINANCING  -->
+					<!-- Begin if there are selected finance items
+					If no finance items are selected, display nothing -->
+						#BeginSelectedFinanceItems()
+						<table class = "FinanceTable">
+						<!-- Begin finance table header. This is the first row of the finance table. -->
+							<tr class = "TotalsRow Bold">
+								<th class = "tHead Left " colspan = "2">#SelectedFinanceItem.FinancingGroup</th>
+								<th class = "Center tHead Qty">Payments</th>
+								<th class = "Center tHead Price">Interval</th>
+								<th class = "Right Price tHead">Amount</th>
+							</tr>
+						<!-- End finance table header -->
+						<!-- Begin iterating through the Finance items. -->
+							#BeginFinanceItems()
+                          	#BeginIfNot6("#FinanceItem.Name","CW Agreement")
+                          	#BeginIfNot7("#FinanceItem.TotalAmount#FinanceItem.RecurringTotalAggregated","00")
+                          	#BeginIfNot8("#FinanceItem.SpreadOneTime#FinanceItem.RecurringPeriods","True0")
+							<!-- Begin if the finance item is in the same financing group as the selected finance item.
+							Items with different financing groups will appear in separate tables. -->
+							#BeginIf("#SelectedFinanceItem.FinancingGroup","#FinanceItem.FinancingGroup")
+							<tr style="background-color:#FFFFFF;border:1px solid black;">
+                              	<td class = "ChBx BdrBtm" #BeginIfNot("#FinanceItem.SpreadOneTime","True")#BeginIfNot3("#FinanceItem.Periods","0")#BeginIfNot2("#FinanceItem.RecurringPeriods","0")#BeginIfNot4("#FinanceItem.TotalAmount","0")#BeginIfNot5("#FinanceItem.RecurringTotalAggregated","0")rowspan="2" style="vertical-align:middle;"#EndIfNot5()#EndIfNot4()#EndIfNot2()#EndIfNot3()#EndIfNot()>#FinanceItem.GenSelectionCheckbox()</td>
+								<td class="BdrBtm" #BeginIfNot("#FinanceItem.SpreadOneTime","True")#BeginIfNot3("#FinanceItem.Periods","0")#BeginIfNot2("#FinanceItem.RecurringPeriods","0")#BeginIfNot4("#FinanceItem.TotalAmount","0")#BeginIfNot5("#FinanceItem.RecurringTotalAggregated","0")rowspan="2" style="vertical-align:middle;"#EndIfNot5()#EndIfNot4()#EndIfNot2()#EndIfNot3()#EndIfNot()>#FinanceItem.Name</td>
+									<!-- If there are recurring periods, display the following -->
+									#BeginIfNot2("#FinanceItem.RecurringPeriods","0")
+										#BeginIfNot("#FinanceItem.RecurringTotalAggregated","0")
+										<td style="border-left:1px solid #EFEFEF;" class = "Center #BeginIf2('#FinanceItem.TotalAmount', '0')BdrBtm#EndIf2() #BeginIf2('#FinanceItem.SpreadOneTime', 'True')BdrBtm#EndIf2() Qty">#FinanceItem.RecurringPeriods</td>
+										<td class = "Center #BeginIf2('#FinanceItem.TotalAmount', '0')BdrBtm#EndIf2() #BeginIf2('#FinanceItem.SpreadOneTime', 'True')BdrBtm#EndIf2() Price">#BeginIfNot3("#FinanceItem.RecurringRevenueLabel","")#FinanceItem.RecurringRevenueLabel#EndIfNot3()#BeginIf3("#FinanceItem.RecurringRevenueLabel","")Monthly#EndIf3()</td>
+										<td class = "Right #BeginIf2('#FinanceItem.TotalAmount', '0')BdrBtm#EndIf2() #BeginIf2('#FinanceItem.SpreadOneTime', 'True')BdrBtm#EndIf2() Price">#FinanceItem.PrintedRecurringTotalAmount</td>
+										#EndIfNot()
+									#EndIfNot2()
+									<!-- This checks for finance items containing both recurring and one-time to determine number of rows to display -->
+									#BeginIfNot4("#FinanceItem.SpreadOneTime","True")
+									#BeginIfNot3("#FinanceItem.Periods","0")
+									#BeginIfNot2("#FinanceItem.RecurringPeriods","0")
+                              		#BeginIfNot("#FinanceItem.RecurringTotalAmount","0")
+                          			</tr><tr style="background-color:#FFFFFF;border:1px solid black;">
+                          			#EndIfNot()
+									#EndIfNot2()
+									#EndIfNot3()
+									#EndIfNot4()
+									<!-- End check for displaying 2 rows -->
+									<!-- Display one-time amounts -->
+									#BeginIfNot4("#FinanceItem.SpreadOneTime","True")
+									#BeginIfNot3("#FinanceItem.Periods","0")
+									#BeginIfNot2("#FinanceItem.TotalAmount","0")
+										<td style="border-left:1px solid #EFEFEF;" class = "Center Qty BdrBtm">#FinanceItem.Periods</td>
+										<td class = "Center Price BdrBtm">#IfReplace("#FinanceItem.PeriodInterval", "None", "One-Time")#IfNotReplace("#FinanceItem.PeriodInterval", "None", "#FinanceItem.PeriodInterval")</td>
+										<td class = "Right Price BdrBtm">#FinanceItem.PrintedPeriodPaymentAmount</td>
+									#EndIfNot2()
+									#EndIfNot3()
+									#EndIfNot4()
+									<!-- End check for displaying 2 rows -->
+							</tr>
+							#EndIf()
+                          	#EndIfNot8()
+                          	#EndIfNot7()
+                      		#EndIfNot6()
+							#EndFinanceItems()
+						<!-- End iterating through the finance items. -->
+						<!-- Begin the high level summary of the Finance table. This includes the Selected Payment,
+						Total Payment, and Downpayment if there is any.-->
+							#BeginIfGreaterThan("#SelectedFinanceItem.RecurringPeriods","1")
+								#BeginIfNot2("#SelectedFinanceItem.RecurringTotalAggregated","0")
+								<tr class="TotalsRow">
+									<td class = "ChBx"></td>
+									<td class = "Bold" colspan="3">Selected Recurring Payment</td>
+									<td class="Bold Right">#SelectedFinanceItem.PrintedRecurringTotalAmount</td>
+								</tr>
+								#EndIfNot2()
+							#EndIfGreaterThan()
+							#BeginIfNot3("#SelectedFinanceItem.SpreadOneTime","True")
+							#BeginIfGreaterThan("#SelectedFinanceItem.Periods","1")
+							<tr class = "TotalsRow">
+								<td class = "ChBx"></td>
+								<td class = "Bold" colspan="3">Selected Payment</td>
+								<td class = "Bold Right">#SelectedFinanceItem.PrintedPeriodPaymentAmount</td>
+							</tr>
+							#EndIfGreaterThan()
+							#EndIfNot3()
+							#BeginIfNot("#SelectedFinanceItem.DownPayment","0")
+							<tr class = "TotalsRow">
+								<td class = "ChBx"></td>
+								<td class = "Bold" colspan="3">Down Payment</td>
+								<td class = "Bold Right">#SelectedFinanceItem.PrintedDownPayment</td>
+							</tr>
+							#EndIfNot()
+							#BeginIfNot("#SelectedFinanceItem.RecurringPeriods","0")
+								#BeginIfNot2("#SelectedFinanceItem.RecurringTotalAggregated","0")
+								<tr class = "TotalsRow">
+									<td class = "ChBx"></td>
+									<td class = "Bold" colspan="3">Total of Recurring Payments</td>
+									<td class="Bold Right FinanceTotals">#SelectedFinanceItem.RecurringTotalAggregated.Currency</td>
+								</tr>
+								#EndIfNot2()
+							#EndIfNot()
+							#BeginIfNot3("#SelectedFinanceItem.SpreadOneTime","True")
+								#BeginIfNot("#SelectedFinanceItem.Periods","0")
+									#BeginIfNot2("#SelectedFinanceItem.TotalAmount","0")
+										<tr class = "TotalsRow">
+											<td class = "ChBx"></td>
+											<td class = "Bold" colspan="3">Total of Payments</td>
+											<td class = "Bold Right FinanceTotals">#SelectedFinanceItem.PrintedTotalAmount</td>
+										</tr>
+									#EndIfNot2()
+								#EndIfNot()
+							#EndIfNot3()
+
+						<!-- End high level summary of Finance table. -->
+						</table>
+						<div class = "Line"></div>
+                      	<!-- BEGIN UPDATE OPTIONS BUTTON FOR TERMS  -->
+						<div class = "UpdateButton">
+							<div>#UnapprovedBegin()<input class="btn" type="submit" value="Update Options" />#UnapprovedEnd()</div>
+						</div>
+              			<!--  END UPDATE OPTIONS BUTTON FOR TERMS -->
+						#EndSelectedFinanceItems()
+					<!-- End iterating through selected finance items. -->
+	<!-- END TERMS & FINANCING  -->
+					</div>
+				</div>
+				<div class = "Clear"></div> <!-- Used for formatting-->
+
+<!--  END STEP REVIEW OPTIONS  -->
+<!--  BEGIN STEP PAYMENT  -->
+              #BeginIfNot("#Quote.OrderPorterPaymentMode","None")#BeginIfNot2("#Quote.OrderPorterPaymentMode","Terms")#BeginIfNot3("#Quote.OrderPorterPaymentMode","")
+            <div class="Panel">
+                <div class="SilverHeader">
+                    <h2>Payment Information</h2>
+				</div>
+
+                 <div class="SilverPanel">
+					#ApprovedBegin()<br />
+                    <p class='ApprovalMessage Center'>This quote has been approved. The payment transaction ID was
+                        #Payment.TransactionId.</p><br />#ApprovedEnd()
+
+                    #UnapprovedBegin()
+                    <!-- If this quote uses Payment processing (i.e. Authorize.net or Paypal Payflow Pro) and the quote total is not 0, display the following: -->
+                    #OrderPorterPaymentBegin()
+                    <div id="FieldColumnRight">
+                      	<h1>Payment Method</h1>
+                        <select name="#Quote.InputOrderPorterPaymentMode" class="paymentoption" style="display: block; width: 100%; height: calc(1.5rem + .75rem + 2px);
+                                          padding: .375rem .75rem; font-size: 1rem; font-weight: 400; line-height: 1.5;
+                                           color: #495057; background-color: #fff; background-clip: padding-box;
+                                            border: 1px solid#ced4da; border-radius: .25rem; font-family: Roboto, sans-serif;
+                                             transition: border-color .15s ease-in-out,  ease-in-out;
+                                              overflow: visible; margin: 0;">
+                            <option value="None">Invoicing</option>
+                            #BeginIf("#Quote.OrderPorterPaymentMode","Authorize.net")<option value="Authorize.net"
+                                selected>Credit Card</option>#EndIf()
+                            #BeginIf("#Quote.OrderPorterPaymentMode","Paypal Payflow")<option value="Paypal Payflow"
+                                selected>Credit Card</option>#EndIf()
+                            #BeginIf("#Quote.OrderPorterPaymentMode","ConnectBooster")<option value="ConnectBooster"
+                                selected>Pay Now</option>#EndIf()
+                        </select>
+                        <div id="payment">
+                            <!--begin connectbooster-->
+                            <div style="position: relative;">
+                                <h1>Billing Address
+                                </h1>
+                                <form method="post">
+                                    <table class="tableDataInput">
+                                        <tr style="display: grid;background-color:transparent !important;">
+                                            <td style="display: inline-block;border:0;">
+                                              	<p class="SigPay">First Name:</p>
+                                                <input class="paymentInput" size="30"
+                                                    type="text" name="#Billing.InputFirstName"
+                                                    value="#Billing.FirstName" id="firstnamebilling">
+                                            </td>
+                                            <td style="display: inline-block;border:0;">
+                                              	<p class="SigPay">Last Name:</p>
+                                                <input class="paymentInput" size="30"
+                                                    type="text" name="#Billing.InputLastName" value="#Billing.LastName">
+                                            </td>
+                                        <tr style="display: grid;background-color:transparent !important;">
+                                            <td style="border:0;">
+                                              	<p class="SigPay">Address:</p>
+                                                <input class="paymentInput" size="30"
+                                                    type="text" name="#Billing.InputAddress1" value="#Billing.Address1">
+                                            </td>
+                                        </tr>
+                                        <tr style="display: grid;background-color:transparent !important;">
+                                            <td style="border:0;">
+                                                <input class="paymentInput" size="30"
+                                                    type="text" name="#Billing.InputAddress2" value="#Billing.Address2">
+                                            </td>
+                                        </tr>
+                                        <tr style="display: flex;background-color:transparent !important;">
+                                            <td style="border:0;"><p class="SigPay">City:</p>
+                                              <input class="paymentInput" size="30" type="text"
+                                                    name="#Billing.InputCity" value="#Billing.City">
+                                            </td>
+                                            <td style="border:0;"><p class="SigPay">State:</p>
+                                              <input class="paymentInput" size="30" type="text"
+                                                    name="#Billing.InputState" value="#Billing.State">
+                                            </td>
+                                            <td style="border:0;"><p class="SigPay">Postal Code:</p>
+                                                <input class="paymentInput" size="30" type="text"
+                                                    name="#Billing.InputPostalCode" value="#Billing.PostalCode">
+                                            </td>
+                                        </tr>
+                                        <tr style="display: grid;background-color:transparent !important;">
+                                            <td style="border:0;">
+                                              	<p class="SigPay">Country:</p>
+                                                <input class="paymentInput" size="30"
+                                                    type="text" name="country" value="#Billing.Country">
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                    <div id="otherPaymentCreditCardFields">
+                                        <p class="SigPay">Credit Card Number:</p>
+                                        <!-- CreditCardNumber tag generates an <input> tag. Can inherit CSS styling. -->
+                                        <div class="Field tableDataInput">#CreditCardNumber</div>
+                                        <p class="SigPay">Security Code:</p>
+                                        <!-- CreditCardSecurityCode tag generates an <input> tag. Can inherit CSS styling. -->
+                                        <div class="Field tableDataInput">#CreditCardSecurityCode</div>
+                                        <p class="SigPay">Expiration Date:</p>
+                                        <!-- CreditCardMonth CreditCardYear generates a dropdown. -->
+                                        <div class="Field tableDataInput">#CreditCardMonth / #CreditCardYear</div>
+                                    </div>
+                                </form>
+
+                                <div id="connectBoosterButtons" style="display: none;">
+                                    <h1>Payment Option</h1>
+                                    <button class="paymentButtons btn" id="customBankAccountPayment" type="button">
+                                        Pay using ACH
+                                        <span style="display: none;" id="ckAdjustmentBtn"></span>
+                                    </button>
+                                    <button class="paymentButtons btn" id="customCCPayment" type="button">
+                                        Pay by credit card
+                                        <span style="display: none;" id="ccAdjustmentBtn"></span>
+                                    </button>
+                                </div>
+                                <div id="paymentDataBody" class="paymentData">
+                                    <div class="paymentDataContent">
+                                        <h3 id="paymentDataBodyTitle" class="paymentDataContentTitle"></h3>
+                                        <div class="paymentDataMainContent">
+                                            <div class="paymentDataMainContentItem" id="quoteAmount"></div>
+                                            <div class="paymentDataMainContentItem" id="paymentData"></div>
+                                            <div class="paymentDataMainContentItem" id="gatewayEnabled"
+                                                style="display: none;">
+                                                <input type="checkbox" id="GatewayAddToVault" name="GatewayAddToVault">
+                                                <label>Store payment information</label>
+                                            </div>
+                                            <div class="paymentDataMainContentItem" id="adjustmentsEnabled" style="">
+                                            </div>
+                                            <input type="hidden" id="ConnectBoosterToken" name="ConnectBoosterToken"
+                                                value="">
+                                            <input type="hidden" id="ConnectBoosterPaymentType"
+                                                name="ConnectBoosterPaymentType" value="">
+                                        </div>
+                                    </div>
+                                  <div id="paymentClear" style="cursor:pointer;float:right;font-weight:normal;text-decoration:underline;"><a>Clear Payment Option</a></div>
+                                </div>
+                            </div>
+                  		<!--end connectbooster-->
+                  		#CreditCardProcessing
+                  		</div>
+                  </div>
+					#OrderPorterPaymentEnd()
+                   	<div id="cashtermoption">Cash/Terms</div>
+                  #UnapprovedEnd()
+                </div>
+            </div>
+              #EndIfNot3()#EndIfNot2()#EndIfNot()
+<!--  BEGIN STEP PAYMENT  -->
+<!--  BEGIN STEP APPROVAL -->
+				<div class = "Panel">
+					<div class="SilverHeader">
+						<h2>Approval</h2>
+					</div>
+					<div class="SilverPanel">
+						<div id = "Approve">
+	<!--  BEGIN TERMS AND CONDITIONS  -->
+                          <p>#Quote.HtmlNotes2</p><br>
+							<p  class = "Approve">#Quote.TermsAndConditions</p>
+							#BeginSelectedFinanceItems()#SelectedFinanceItem.Description <br />#EndSelectedFinanceItems()
+						<!-- If the quote has been deleted, display the following: -->
+							#DeletedBegin()
+								<p class = "ApprovalMessage">This Quote has been deactivated</p>
+								<p>Please contact your Sales Representative at <a href="mailto:#Salesrep.EmailAddress">#Salesrep.EmailAddress</a> for more information.</p>
+							#DeletedEnd()
+						<!-- If the quote has expired, display the following:-->
+							#ExpiredBegin()
+								<p class = "ApprovalMessage">This quote has expired</p>
+								<p>Please contact your Sales Representative at <a href="mailto:#Salesrep.EmailAddress">#Salesrep.EmailAddress</a> for more information.</p>
+							#ExpiredEnd()
+						<!-- If the quote has been approved, display the following: -->
+							#ApprovedBegin()<br /><p class='ApprovalMessage Center'>This quote has been approved</p><br />#ApprovedEnd()
+						<!-- If the quote has not been approved, display the required checkbox. -->
+							#UnapprovedBegin()<br /><center><img class='reqcheck' src="https://www.orderporter.com/cust/NewTemplates/required-fields-icon.png" />#Quote.GenApprovedCheckbox() <span class='Bold'>I accept the above conditions</span></center>#UnapprovedEnd()
+	<!--  END TERMS AND CONDITIONS  -->
+	<!--  BEGIN PAYMENT OPTIONS  -->
+						<!-- If the quote has not been approved, display the following: -->
+							#UnapprovedBegin()
+							<div id="ApprovalFieldsBox">
+							<!-- If the "Use E-signature" checkbox is checked (in Publish Settings), display the following: -->
+								#BeginIf2("#Quote.OrderPorterEsign","True")
+								<div id ="FieldColumnLeft" class = "FieldColumn">
+									<h1>E-Signature</h1>
+									<p class="SigPay">Your Initials:</p>
+									<div class = "Field tableDataInput">
+										<input class = 'FieldName' type="text" name="#Quote.InputOrderPorterInitialsSig" value="#Quote.OrderPorterInitialsSig" size="20" />
+										<img src="https://www.orderporter.com/cust/NewTemplates/required-fields-icon.png" class='VMid req' />
+									</div>
+									<p class="SigPay">Your Email Address:</p>
+									<div class = "Field tableDataInput">
+										<input class = 'FieldName' type="text" name="#Quote.InputOrderPorterEmailSig" size="40" value="#Quote.OrderPorterEmailSig"/>
+										<img src="https://www.orderporter.com/cust/NewTemplates/required-fields-icon.png" class='VMid req' />
+									</div>
+									<p class="SigPay">Purchase Order Number:</p>
+									<div class = "Field tableDataInput"><input type="text" name="#Quote.InputPurchaseOrderNumber" size="40" value="#Quote.PurchaseOrderNumber" /></div>
+								</div>
+								<div class="Clear"></div> <!-- Used for formatting -->
+		<!--  BEGIN SIGNATURE BOX  -->
+							<!-- If the "Show Signature Box" checkbox is checked, display the following: -->
+								#BeginIf("#Quote.OrderPorterShowSignature","True")
+								<div id = "SignatureRow" style="display:none;">
+									<p class="SigPay">Sign Here <img src="https://www.orderporter.com/cust/NewTemplates/required-fields-icon.png" class='VMid req' id="sigReq"/> :</p>
+									<div class = "Center" style="margin: 2px auto 10px;">
+										<img class = "SignX" src ="https://www.orderporter.com/cust/jQuery/jSignature/x.png"/>
+										<div id ="Signature"></div>
+										<span id = "ClearButton">Clear Signature</span>
+										<input name="base64customersig" type="hidden" class="uniquesignatureclass" />
+									</div>
+								</div>
+								#EndIf()
+								#EndIf2()
+							</div>
+							#UnapprovedEnd()
+						<!-- Accept order button -->
+							#UnapprovedBegin()<p id="RequiredFieldsMessage" style="text-align:center;">Please fill out the required fields above and check 'I accept the above conditions'</p>#UnapprovedEnd()
+							<div class="Center">#UnapprovedBegin()<input class="btn" type="submit" value="Accept Order" id="submission" />#UnapprovedEnd()</div>
+	<!-- END SIGNATURE BOX -->
+						</div>
+					</div>
+				</div>
+<!-- END APPROVAL-->
+			</div>
+			#Quote.EndFormHtml()
+<!-- END LEFT COLUMN -->
+
+<!--  BEGIN FOOTER  -->
+			<div class = "Footer">
+				<p class="Center"><a target='_blank' href='https://www.connectwise.com/software/sell/quote-proposal'><img src="https://oflsusee02.blob.core.windows.net/customer/Assets/ConnectWise.svg" class = "FooterImg"></a>This page was created using online quoting technology by ConnectWise, LLC. © 2021</p>
+      		</div>
+<!--  END FOOTER  -->
+		</div>
+<!--  END PAGE CONTAINER  -->
+	</body>
+</html>
